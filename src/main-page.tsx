@@ -7,7 +7,7 @@ import { CoinOverview } from './coin-overview';
 import { Dropdown } from './dropdown';
 import { Page } from './page';
 
-const listUrl = 'https://api.coinlore.net/api/tickers/?start=0&limit=5';
+const listUrl = 'https://api.coinlore.net/api/tickers/?start=0&limit=10';
 
 export const MainPage = () => {
   const [options, setOptions] = useState<{ label: string; value: string }[]>(

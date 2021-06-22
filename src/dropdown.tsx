@@ -19,7 +19,7 @@ type DropdownItemProps = {
 
 const DropdownRoot = styled.div`
   position: relative;
-  width: 200px;
+  width: 100%;
   margin-bottom: 16px;
 `;
 
@@ -50,6 +50,7 @@ const DropdownMenu = styled.div`
   background: #ffffff;
   overflow-x: hidden;
   z-index: 10;
+  max-height: 400px;
   border-radius: 8px;
   width: 200px;
   position: absolute;
