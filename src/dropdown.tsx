@@ -20,7 +20,7 @@ type DropdownItemProps = {
 const DropdownRoot = styled.div`
   position: relative;
   width: 200px;
-  height: 32px;
+  margin-bottom: 16px;
 `;
 
 const DropdownItemRoot = styled.div`
@@ -37,7 +37,7 @@ const DropdownItemRoot = styled.div`
 
 const DropdownIndicator = styled.div`
   background: #7fffd4;
-  height: 32x;
+  height: 32px;
   cursor: pointer;
   border-radius: 8px;
   display: flex;
@@ -47,11 +47,13 @@ const DropdownIndicator = styled.div`
 `;
 
 const DropdownMenu = styled.div`
+  background: #ffffff;
   overflow-x: hidden;
+  z-index: 10;
   border-radius: 8px;
   width: 200px;
   position: absolute;
-  top: 48px;
+  top: 56px;
   box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),
     0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
 `;
@@ -70,6 +72,8 @@ const DropdownItem: FC<DropdownItemProps> = ({ item, onSelected }) => {
 const Arrow = styled(ChevronDown)`
   transform: ${(props: { isOpen: boolean }) =>
     props.isOpen ? 'rotate(180deg)' : 'initial'};
+
+  transition: all 0.2s ease-in-out;
 `;
 
 export const Dropdown: FC<DropdownProps> = ({ options, onChange, value }) => {
